@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %} My Stocks {% endblock %}
+{% block head %} 
+<script src="https://unpkg.com/rough-viz@2.0.5"></script>
+{% endblock %}
+
+{% block content %}
+<h3>Track New Stock</h3>
+<form method="POST">
+    <div class ='form=group'>
+        
+    </div>
+    <div align="center">
+        <button type="submit"class="btn-primary">New Stock</button>
+    </div>
+
+</form>
+
+<div><h1>My Stocks</h1></div>
+
+<div class="graphs" align="center">
+    <h2>Test Data1:</h2>
+    <div id="viz0" style="width: 500px; height: 400px;"></div>
+    <h2>Test Data2:</h2>
+    <div id="viz1" style="width: 500px; height:400px;"></div>
+</div>
+
+{% endblock %}
+
+{% block jscode %} 
+
+<script type='module' src="../static/index.js">
+    console.log("Hello World from my Stocks!");
+</script>
+{% endblock %}
+
