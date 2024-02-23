@@ -8,6 +8,7 @@ class BaseConfig(BaseSettings):
     dev_secret_access_key: str = os.getenv("DEV_SECRET_ACCESS_KEY")
     mongo_database_name: str = 'girlstocks'
     mongo_database_uri: str = os.getenv("DATABASE_URI")
+    NASDAQ_KEY: str = os.getenv("NASDAQ_API_KEY")
    
 
 

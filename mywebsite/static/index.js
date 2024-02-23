@@ -27,4 +27,22 @@ new roughViz.Donut(
     }
   ); 
 
+  new roughViz.Line({
+    element: '#viz2',
+    data: 'https://raw.githubusercontent.com/jwilber/random_data/master/profits.csv',
+    y1: 'revenue',
+    y2: 'cost',
+    y3: 'profit'
+  });
+
+  new roughViz.Bar({
+    element: '#viz3', // container selection
+    data: 'https://raw.githubusercontent.com/jwilber/random_data/master/flavors.csv',
+    labels: 'flavor',
+    values: 'price',
+    margin: { top: 20, right: 20, bottom: 45, left: 25 },
+    color: 'pink',
+    roughness: 3
+});
+
 console.log("Hello World stocks visualization!");

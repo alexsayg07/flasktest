@@ -8,10 +8,13 @@ from flask_login import LoginManager
 
 db = SQLAlchemy()
 DB_NAME = 'girlstocks.db'
+from .config import BaseConfig
+config = BaseConfig()
+NASDAQ_KEY = config.NASDAQ_KEY
 
 def create_app() -> Flask:
-    from .config import BaseConfig
-    config = BaseConfig()
+    
+
     app = Flask(__name__)
     # Want to store this elsewhere after development so that it is not easily accessed 
     app.config['SECRET_KEY'] = config.dev_secret_access_key
